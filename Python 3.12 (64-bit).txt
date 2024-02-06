@@ -1,0 +1,200 @@
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> '''
+... Number Guessing Game
+... -------------------------------------------------------------
+... '''
+'\nNumber Guessing Game\n-------------------------------------------------------------\n'
+>>>
+>>> import random
+>>>
+>>>
+>>> def show_score(attempts_list):
+...     if not attempts_list:
+...         print('There is currently no best score,'
+...               ' it\'s yours for the taking!')
+...
+>>>     else:
+  File "<stdin>", line 1
+    else:
+IndentationError: unexpected indent
+>>>         print(f'The current best score is'
+  File "<stdin>", line 1
+    print(f'The current best score is'
+IndentationError: unexpected indent
+>>>               f' {min(attempts_list)} attempts')
+  File "<stdin>", line 1
+    f' {min(attempts_list)} attempts')
+IndentationError: unexpected indent
+>>>
+>>>
+>>> def start_game():
+...     attempts = 0
+...     rand_num = random.randint(1, 10)
+...     attempts_list = []
+...
+>>>     print('Hello traveler! Welcome to the game of guesses!')
+  File "<stdin>", line 1
+    print('Hello traveler! Welcome to the game of guesses!')
+IndentationError: unexpected indent
+>>>     player_name = input('What is your name? ')
+  File "<stdin>", line 1
+    player_name = input('What is your name? ')
+IndentationError: unexpected indent
+>>>     wanna_play = input(
+  File "<stdin>", line 1
+    wanna_play = input(
+IndentationError: unexpected indent
+>>>         f'Hi, {player_name}, would you like to play '
+  File "<stdin>", line 1
+    f'Hi, {player_name}, would you like to play '
+IndentationError: unexpected indent
+>>>         f'the guessing game? (Enter Yes/No): ')
+  File "<stdin>", line 1
+    f'the guessing game? (Enter Yes/No): ')
+IndentationError: unexpected indent
+>>>
+>>>     if wanna_play.lower() != 'yes':
+  File "<stdin>", line 1
+    if wanna_play.lower() != 'yes':
+IndentationError: unexpected indent
+>>>         print('That\'s cool, Thanks!')
+  File "<stdin>", line 1
+    print('That\'s cool, Thanks!')
+IndentationError: unexpected indent
+>>>         exit()
+  File "<stdin>", line 1
+    exit()
+IndentationError: unexpected indent
+>>>     else:
+  File "<stdin>", line 1
+    else:
+IndentationError: unexpected indent
+>>>         show_score(attempts_list)
+  File "<stdin>", line 1
+    show_score(attempts_list)
+IndentationError: unexpected indent
+>>>
+>>>     while wanna_play.lower() == 'yes':
+  File "<stdin>", line 1
+    while wanna_play.lower() == 'yes':
+IndentationError: unexpected indent
+>>>         try:
+  File "<stdin>", line 1
+    try:
+IndentationError: unexpected indent
+>>>             guess = int(input('Pick a number between 1 and 10: '))
+  File "<stdin>", line 1
+    guess = int(input('Pick a number between 1 and 10: '))
+IndentationError: unexpected indent
+>>>             if guess < 1 or guess > 10:
+  File "<stdin>", line 1
+    if guess < 1 or guess > 10:
+IndentationError: unexpected indent
+>>>                 raise ValueError(
+  File "<stdin>", line 1
+    raise ValueError(
+IndentationError: unexpected indent
+>>>                     'Please guess a number within the given range')
+  File "<stdin>", line 1
+    'Please guess a number within the given range')
+IndentationError: unexpected indent
+>>>
+>>>             attempts += 1
+  File "<stdin>", line 1
+    attempts += 1
+IndentationError: unexpected indent
+>>>
+>>>             if guess == rand_num:
+  File "<stdin>", line 1
+    if guess == rand_num:
+IndentationError: unexpected indent
+>>>                 attempts_list.append(attempts)
+  File "<stdin>", line 1
+    attempts_list.append(attempts)
+IndentationError: unexpected indent
+>>>                 print('Nice! You got it!')
+  File "<stdin>", line 1
+    print('Nice! You got it!')
+IndentationError: unexpected indent
+>>>                 print(f'It took you {attempts} attempts')
+  File "<stdin>", line 1
+    print(f'It took you {attempts} attempts')
+IndentationError: unexpected indent
+>>>                 wanna_play = input(
+  File "<stdin>", line 1
+    wanna_play = input(
+IndentationError: unexpected indent
+>>>                     'Would you like to play again? (Enter Yes/No): ')
+  File "<stdin>", line 1
+    'Would you like to play again? (Enter Yes/No): ')
+IndentationError: unexpected indent
+>>>                 if wanna_play.lower() != 'yes':
+  File "<stdin>", line 1
+    if wanna_play.lower() != 'yes':
+IndentationError: unexpected indent
+>>>                     print('That\'s cool, have a good one!')
+  File "<stdin>", line 1
+    print('That\'s cool, have a good one!')
+IndentationError: unexpected indent
+>>>                     break
+  File "<stdin>", line 1
+    break
+IndentationError: unexpected indent
+>>>                 else:
+  File "<stdin>", line 1
+    else:
+IndentationError: unexpected indent
+>>>                     attempts = 0
+  File "<stdin>", line 1
+    attempts = 0
+IndentationError: unexpected indent
+>>>                     rand_num = random.randint(1, 10)
+  File "<stdin>", line 1
+    rand_num = random.randint(1, 10)
+IndentationError: unexpected indent
+>>>                     show_score(attempts_list)
+  File "<stdin>", line 1
+    show_score(attempts_list)
+IndentationError: unexpected indent
+>>>                     continue
+  File "<stdin>", line 1
+    continue
+IndentationError: unexpected indent
+>>>             else:
+  File "<stdin>", line 1
+    else:
+IndentationError: unexpected indent
+>>>                 if guess > rand_num:
+  File "<stdin>", line 1
+    if guess > rand_num:
+IndentationError: unexpected indent
+>>>                     print('It\'s lower')
+  File "<stdin>", line 1
+    print('It\'s lower')
+IndentationError: unexpected indent
+>>>                 elif guess < rand_num:
+  File "<stdin>", line 1
+    elif guess < rand_num:
+IndentationError: unexpected indent
+>>>                     print('It\'s higher')
+  File "<stdin>", line 1
+    print('It\'s higher')
+IndentationError: unexpected indent
+>>>
+>>>         except ValueError as err:
+  File "<stdin>", line 1
+    except ValueError as err:
+IndentationError: unexpected indent
+>>>             print('Oh no!, that is not a valid value. Try again...')
+  File "<stdin>", line 1
+    print('Oh no!, that is not a valid value. Try again...')
+IndentationError: unexpected indent
+>>>             print(err)
+  File "<stdin>", line 1
+    print(err)
+IndentationError: unexpected indent
+>>>
+>>>
+>>> if __name__ == '__main__':
+...     start_game()
